@@ -44,7 +44,7 @@ public class Account {
         balance += amount;
     }
 
-    // sacando dinheiro da conta com uma taxa de R$ 5,00 e e criando uma 'quantia (amount)'
+    // sacando dinheiro da conta com uma taxa de R$ 5,00 e criando uma 'quantia (amount)'
     public void removeBalance(double amount){
         balance -= amount + 5.0;
     }

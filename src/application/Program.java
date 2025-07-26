@@ -52,7 +52,7 @@ public class Program {
         entrada.nextLine();
         account.deposit(balance);
 
-        System.out.println();
+        System.out.println(); // pula uma linha
         System.out.println("Dados atualizados: " + account);
 
         // pedindo para sacar o dinheiro
