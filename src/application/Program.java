@@ -37,6 +37,7 @@ public class Program {
             account = new Account(numberAccount, name, initialDeposit);
         }
         else{
+            // criando a conta sem um depósito inicial
             account = new Account(numberAccount, name);
         }
 
