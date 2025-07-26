@@ -33,6 +33,11 @@ public class Count {
         this.balance += balance;
     }
 
+    // sacando dinheiro da conta com uma taxa de R$ 5,00
+    public void removeBalance(double balance){
+        this.balance -= (balance + 5.0);
+    }
+
 // para imprimir as informações
 
     public String toString(){
