@@ -50,6 +50,17 @@ public class Account {
         balance -= amount + 5.0;
     }
 
+    // alteração de nome que não aceita menos do que 3 letras ou igual ao nome anterior
+    public String changeName(String newName){
+        if (newName.length() < 3){
+            return "Erro: o nome dever ter no mínimo 3 letras.";
+        }
+        else{
+            this.name = newName;
+            return "Nome atualizado com sucesso para: " + this.name;
+        }
+    }
+
 // para imprimir as informações
 
     public String toString(){

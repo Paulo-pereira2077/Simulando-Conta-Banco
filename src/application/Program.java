@@ -26,9 +26,9 @@ public class Program {
         System.out.println(); // pula uma linha
         System.out.print("Gostaria de fazer um depósito? (s/n):");
         // trocando de String para char e removendo o 'double balance = 0;'
-        char resposta = entrada.next().charAt(0);
+        char answer = entrada.next().charAt(0);
 
-        if (resposta == 's'){
+        if (answer == 's'){
             System.out.println();// pula uma linha
             System.out.print("Valor do depósito inicial: R$ ");
             // trocando de 'balance' para initialDeposit
@@ -53,24 +53,41 @@ public class Program {
         entrada.nextLine();
         account.deposit(balance);
 
+        // exibe atuaizações
         System.out.println(); // pula uma linha
         System.out.println("Dados atualizados: " + account);
 
         // pedindo para sacar o dinheiro
         System.out.println(); // pula uma linha
         System.out.print("Gostaria de sacar o dinheiro? (s/n): ");
-        resposta = entrada.next().charAt(0);
-        if (resposta == 's') {
+        answer = entrada.next().charAt(0);
+        if (answer == 's') {
             System.out.print("Valor do saque: R$ ");
             balance = entrada.nextDouble();
             account.removeBalance(balance);
         }
 
-        System.out.println();
+        // exibe atuaizações
+        System.out.println(); // pula uma linha
+        System.out.println("Dados atualizados: " + account);
+
+        System.out.println(); // pula uma linha
+        System.out.println("Gostaria de alterar seu nome? (s/n): ");
+        answer = entrada.next().charAt(0);
+        entrada.nextLine(); // consome um espaço e permite executar a operação abaixo
+
+        String newName; // criado para poder utilizar no laço de repetição
+        do{
+            System.out.println("Digite seu novo nome: ");
+            newName = entrada.nextLine();
+            System.out.println(account.changeName(newName));
+        }while (newName.length() < 3);
+
+        // exibe atuaizações
+        System.out.println(); // pula uma linha
         System.out.println("Dados atualizados: " + account);
 
         entrada.close();
     }
-
 
 }
