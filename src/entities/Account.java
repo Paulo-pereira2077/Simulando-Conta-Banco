@@ -55,6 +55,10 @@ public class Account {
         if (newName.length() < 3){
             return "Erro: o nome dever ter no mínimo 3 letras.";
         }
+        // o equals.ignoreCase() compara strings, permitindo alterar o nome diferente do anterior
+        else if (newName.equalsIgnoreCase(this.name.trim())){
+            return "Erro: o novo nome não pode ser igual ao anterior.";
+        }
         else{
             this.name = newName;
             return "Nome atualizado com sucesso para: " + this.name;

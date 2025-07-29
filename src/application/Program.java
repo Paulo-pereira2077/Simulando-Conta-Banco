@@ -71,17 +71,22 @@ public class Program {
         System.out.println(); // pula uma linha
         System.out.println("Dados atualizados: " + account);
 
+        // pergunta se quer alterar o nome
         System.out.println(); // pula uma linha
-        System.out.println("Gostaria de alterar seu nome? (s/n): ");
+        System.out.print("Gostaria de alterar seu nome? (s/n): ");
         answer = entrada.next().charAt(0);
         entrada.nextLine(); // consome um espaço e permite executar a operação abaixo
+        System.out.println();
 
         String newName; // criado para poder utilizar no laço de repetição
+        String result; // criando para poder utilizar o else if no laço de repetição
         do{
-            System.out.println("Digite seu novo nome: ");
+            System.out.print("Digite seu novo nome: ");
             newName = entrada.nextLine();
-            System.out.println(account.changeName(newName));
-        }while (newName.length() < 3);
+            result = account.changeName(newName);
+            System.out.println(result);
+            System.out.println();
+        }while (result.startsWith("Erro"));
 
         // exibe atuaizações
         System.out.println(); // pula uma linha
