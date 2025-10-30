@@ -80,6 +80,7 @@ public class Program {
 
         String newName; // criado para poder utilizar no laço de repetição
         String result; // criando para poder utilizar o else if no laço de repetição
+        if (answer == 's'){
         do{
             System.out.print("Digite seu novo nome: ");
             newName = entrada.nextLine();
@@ -87,8 +88,9 @@ public class Program {
             System.out.println(result);
             System.out.println();
         }while (result.startsWith("Erro"));
+        }
 
-        // exibe atuaizações
+        // exibe atualizações
         System.out.println(); // pula uma linha
         System.out.println("Dados atualizados: " + account);
 
